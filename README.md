@@ -17,3 +17,7 @@ MongoDB Setup
     "dev": "nodemon src/index.js"
     }
 4. npm run dev 
+
+Install Postman
+1. https://www.getpostman.com/
+2. Download, unzip and then ./Postman
