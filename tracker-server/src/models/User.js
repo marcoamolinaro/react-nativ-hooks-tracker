@@ -51,6 +51,6 @@ userSchema.methods.comparePassword = function(candidatePassword) {
             resolve(true);
         });
     });
-}
+};
 
 mongoose.model('User', userSchema);
