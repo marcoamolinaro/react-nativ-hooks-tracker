@@ -12,3 +12,12 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 Install native elements
 npm install react-native-elements
+
+Install axios
+npm install axios
+
+Install ngrok
+npm install -g ngrok OR sudo snap install ngrok (*)
+
+to run
+ngrok http 3000 (port of the npm run dev)
