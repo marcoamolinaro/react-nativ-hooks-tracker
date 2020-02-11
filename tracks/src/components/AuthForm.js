@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Text, Button, Input } from 'react-native-elements';
-import Spacer from '../components/Spacer';
+import Spacer from './Spacer';
 
-const AuthForm = ({ headText, errorMessage, onSubmit, buttonText }) => {
+const AuthForm = ({ headerText, errorMessage, onSubmit, buttonText }) => {
     const [email, setEmail] = useState('');
     const [ password, setPassword ] = useState('');
 
     return (
         <>
             <Spacer>
-                <Text h3>Sign Up for Tracks</Text>
+                <Text h3>{headerText}</Text>
             </Spacer>
             <Input 
                 label="EMail"
@@ -28,11 +28,11 @@ const AuthForm = ({ headText, errorMessage, onSubmit, buttonText }) => {
                 autoCorrect={false}
                 secureTextEntry
             />
-            {state.errorMessage ? <Text style={styles.errorMessage}>{state.errorMessage}</Text> : null}
+            {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}
             <Spacer>
                 <Button 
-                    title="Sign Up"
-                    onPress={() => signup({email, password})}
+                    title={buttonText}
+                    onPress={() => onSubmit({email, password})}
                 />
             </Spacer>
         </>
