@@ -25,4 +25,7 @@ ngrok http 3000 (port of the npm run dev)
 Install react-native-maps
 npx expo-cli install react-native-maps
 
+Install expo-location
+$ npx expo-cli install expo-location
+
 ####
