@@ -10,9 +10,6 @@ const Map = () => {
        return <ActivityIndicator size="large" style={{ marginTop: 200}} />;
     }
 
-    console.log(state);
-    
-
     return (
         <MapView 
             style={styles.map}
@@ -21,12 +18,7 @@ const Map = () => {
                 latitudeDelta: 0.01,
                 longitudeDelta: 0.01
             }}>
-           region={{
-                ...currentLocation.cords,
-                latitudeDelta: 0.01,
-                longitudeDelta: 0.01 
-            }}
-            </MapView>
+        </MapView>
     );
 };
 
