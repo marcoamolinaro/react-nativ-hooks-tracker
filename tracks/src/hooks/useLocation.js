@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import { Accuracy, requestPermissionsAsync, watchPositionAsync } from 'expo-location';
 
-export default (shoulTrack, callback) => {
+export default (shouldTrack, callback) => {
     const [err, setErr] = useState(null);
     const [subscriber, setSubscriber] = useState(null);
 
@@ -22,13 +22,13 @@ export default (shoulTrack, callback) => {
     };
 
     useEffect(() => {
-        if (shoulTrack) {
+        if (shouldTrack) {
             startWatching();
         } else {
            subscriber.remove();
            setSubscriber(null);
         }
-    }, [shoulTrack]);
+    }, [shouldTrack, callback]);
 
     return [err];
 }
