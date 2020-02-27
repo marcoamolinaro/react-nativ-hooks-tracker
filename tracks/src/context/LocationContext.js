@@ -18,7 +18,7 @@ const locationReducer = (state, action) => {
 };
 
 const changeName = dispatch => name => {
-    dispatch({ tye: 'change_name', payload: name});
+    dispatch({ type: 'change_name', payload: name});
 };
 
 const startRecording = dispatch => () => {
